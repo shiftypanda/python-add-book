@@ -35,7 +35,7 @@ class NewVisitorTest(unittest.TestCase):
         inputbox.send_keys('Buy peacock feathers')
 
         # When she hits enter, the page updates, and now the page lists
-        # "1: Buy peacock feathers" as an item ina  to-do list
+        # "1: Buy peacock feathers" as an item in a to-do list
         inputbox.send_keys(Keys.ENTER)
         time.sleep(1)
 
@@ -54,7 +54,7 @@ class NewVisitorTest(unittest.TestCase):
         # that the site has generated a unique URL for her -- there is some
         # explanatory text to that effect.
 
-        # She visits that URL - her to-do list si still there.
+        # She visits that URL - her to-do list is still there.
 
         # Satisfied, she goes back to sleep
 
