@@ -8,6 +8,10 @@ import unittest
 
 MAX_WAIT = 10
 
+"""
+ If running test on staging server use
+ STAGING_SERVER=superlists-staging.sendiary.org ./manage.py test functional_tests --failfast
+"""
 class NewVisitorTest(StaticLiveServerTestCase):
 
     def setUp(self):
