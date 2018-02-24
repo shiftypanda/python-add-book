@@ -10,6 +10,9 @@ def home_page(request):
 
 def view_list(request, list_id):
     list_ = List.objects.get(id=list_id)
+    if request.method == 'POST':
+        Item.objects.create(text=request.POST['item_text'], list=list_)
+        return redirect(f'/lists/{list_id}/')
     return render(request, 'lists/list.html', {'list': list_})
 
 def new_list(request):
@@ -25,8 +28,3 @@ def new_list(request):
     return redirect(f'/lists/{list_.id}/')
 
 # TODO: 7.11 Function test detect another regression (16/2/2018)
-
-def add_item(request, list_id):
-    list_ = List.objects.get(id=list_id)
-    Item.objects.create(text=request.POST['item_text'], list=list_)
-    return redirect(f'/lists/{list_.id}/')
