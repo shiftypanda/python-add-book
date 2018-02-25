@@ -27,6 +27,3 @@ def new_list(request):
         return redirect(list_)
     else:
         return render(request, 'lists/home.html', {"form": form})
-
-
-# TODO: 7.11 Function test detect another regression (16/2/2018)
