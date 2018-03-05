@@ -128,6 +128,13 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Email server settings
+EMAIL_HOST = 'mail3.gridhost.com'
+EMAIL_HOST_USER = 'hello@medicinetech.co.uk'
+EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
+EMAIL_PORT = 465
+EMAIL_USE_SSL = True
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
