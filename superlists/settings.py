@@ -129,7 +129,7 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 # Email server settings
-EMAIL_HOST = 'mail3.gridhost.com'
+EMAIL_HOST = 'mail3.gridhost.co.uk'
 EMAIL_HOST_USER = 'hello@medicinetech.co.uk'
 EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_PASSWORD')
 EMAIL_PORT = 465
