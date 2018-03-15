@@ -21,6 +21,7 @@ class LoginTest(FunctionalTest):
         email_id = None
         start = time.time()
         inbox = poplib.POP3_SSL('mail3.gridhost.co.uk')
+        time.sleep(10)
         try:
             inbox.user(test_email)
             inbox.pass_(os.environ['GRID_PASSWORD'])
@@ -31,7 +32,6 @@ class LoginTest(FunctionalTest):
                     print('getting msg', i)
                     _, lines, __ = inbox.retr(i)
                     lines = [l.decode('utf8') for l in lines]
-
                     if f'Subject: {subject}' in lines:
                         email_id = i
                         body = '\n'.join(lines)

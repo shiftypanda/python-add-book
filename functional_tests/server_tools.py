@@ -1,5 +1,8 @@
 from fabric.api import run
 from fabric.context_managers import settings, shell_env
+from fabric.api import env
+
+env.key_filename = ["~/.ssh/id_rsa.pub"]
 
 def _get_manage_dot_py(host):
     return f'~/sites/{host}/virtualenv/bin/python ~/sites/{host}/manage.py'
