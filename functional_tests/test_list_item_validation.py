@@ -2,7 +2,7 @@ from selenium.webdriver.common.keys import Keys
 from unittest import skip
 from .base import FunctionalTest
 
-MAX_WAIT = 10
+
 
 """
  If running test on staging server use

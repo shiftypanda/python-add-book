@@ -4,8 +4,6 @@ from selenium.webdriver.common.keys import Keys
 
 
 
-MAX_WAIT = 10
-
 """
  If running test on staging server use
  STAGING_SERVER=superlists-staging.sendiary.org ./manage.py test functional_tests --failfast
