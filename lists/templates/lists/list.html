@@ -12,3 +12,17 @@
     </table>
 
 {% endblock %}
+
+{% block extra_content %}
+
+<div>
+    <form class="form"
+          method="POST"
+          action="{% url 'share_list_with' %}">
+
+      <input class="form-control" name="sharee" type="email">
+      {csrf_token}
+    </form>
+</div>
+
+{% endblock%}
