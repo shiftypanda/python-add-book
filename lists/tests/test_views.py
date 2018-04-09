@@ -6,7 +6,7 @@ from django.http import HttpRequest
 from django.utils.html import escape
 import unittest
 
-from lists.views import home_page, new_list
+from lists.views import home_page, new_list, share_list
 from lists.models import Item, List
 from lists.forms import (
     DUPLICATE_ITEM_ERROR, EMPTY_ITEM_ERROR,
@@ -210,3 +210,17 @@ class NewListViewUnitTest(unittest.TestCase):
         mock_render.assert_called_once_with(
             self.request, 'lists/home.html', {'form': mock_form}
         )
+
+
+class ShareListTest(TestCase):
+
+    def setUp(self):
+        self.request = HttpRequest()
+        self.request.POST['text'] = 'new list item'
+        self.request.user = Mock()
+
+# Test to check for rediection need to consdier using f string cheking as in
+# above tests
+    def test_post_redirects_to_lists_page(self):
+        response = share_list(self.request)
+        self.assertContains(response, 'share_list')

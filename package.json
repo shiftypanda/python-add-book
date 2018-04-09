@@ -1,0 +1,22 @@
+{
+  "name": "dev",
+  "version": "1.0.0",
+  "description": "package contents for python-tdd-system",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shiftypanda/python-tdd-book.git"
+  },
+  "author": "Shiftypanda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shiftypanda/python-tdd-book/issues"
+  },
+  "homepage": "https://github.com/shiftypanda/python-tdd-book#readme",
+  "devDependencies": {
+    "phantomjs": "^2.1.7"
+  }
+}
